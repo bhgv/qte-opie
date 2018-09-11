@@ -53,8 +53,6 @@ class QWSClient;
 class QWSRegionManager;
 class QGfx;
 class QWSServerData;
-class QWSInputMethod;
-class QWSGestureMethod;
 
 class QWSInternalWindowInfo
 {
@@ -169,6 +167,8 @@ private:
 
 class QWSMouseHandler;
 struct QWSCommandStruct;
+class QWSInputMethod;
+class QWSGestureMethod;
 
 #ifndef QT_NO_QWS_MULTIPROCESS
 class Q_EXPORT QWSServer : public QWSServerSocket
@@ -213,7 +213,7 @@ public:
 	ushort unicode;
 	ushort shift_unicode;
 	ushort ctrl_unicode;
-    };
+    } KeyMap;
 
     static const KeyMap *keyMap();
 

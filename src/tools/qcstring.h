@@ -119,7 +119,7 @@ Q_EXPORT int qstrnicmp( const char *, const char *, uint len );
 //                   We want to keep source compatibility for 2.x
 // ### TODO for 4.0: completely remove these and the cstr* functions
 
-#if 0
+#if !defined(QT_GENUINE_STR)
 
 #undef	strlen
 #define strlen qstrlen
